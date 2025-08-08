@@ -1,0 +1,219 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Prism.js 语法高亮样式 - 使用内联样式替代 */
+
+:root {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 浅色主题样式 */
+.light {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --bg-tertiary: #e9ecef;
+  --text-primary: #212529;
+  --text-secondary: #6c757d;
+  --border-color: #dee2e6;
+}
+
+/* 深色主题样式 */
+.dark {
+  --bg-primary: #252526;
+  --bg-secondary: #1e1e1e;
+  --bg-tertiary: #2d2d30;
+  --text-primary: #cccccc;
+  --text-secondary: #969696;
+  --border-color: #3e3e42;
+}
+
+/* 隐藏滚动条但保持滚动功能 */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* 代码编辑器样式 */
+.code-editor {
+  font-family: 'Fira Code', 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+}
+
+/* 差异高亮样式 */
+.diff-delete {
+  background-color: rgba(244, 67, 54, 0.2);
+  border-left: 3px solid #f44336;
+}
+
+.diff-insert {
+  background-color: rgba(76, 175, 80, 0.2);
+  border-left: 3px solid #4caf50;
+}
+
+/* Prism.js 深色主题 */
+.dark .token.comment,
+.dark .token.prolog,
+.dark .token.doctype,
+.dark .token.cdata {
+  color: #6a9955;
+}
+
+.dark .token.punctuation {
+  color: #d4d4d4;
+}
+
+.dark .token.property,
+.dark .token.tag,
+.dark .token.boolean,
+.dark .token.number,
+.dark .token.constant,
+.dark .token.symbol,
+.dark .token.deleted {
+  color: #b5cea8;
+}
+
+.dark .token.selector,
+.dark .token.attr-name,
+.dark .token.string,
+.dark .token.char,
+.dark .token.builtin,
+.dark .token.inserted {
+  color: #ce9178;
+}
+
+.dark .token.operator,
+.dark .token.entity,
+.dark .token.url,
+.dark .language-css .token.string,
+.dark .style .token.string {
+  color: #d4d4d4;
+}
+
+.dark .token.atrule,
+.dark .token.attr-value,
+.dark .token.keyword {
+  color: #569cd6;
+}
+
+.dark .token.function,
+.dark .token.class-name {
+  color: #dcdcaa;
+}
+
+.dark .token.regex,
+.dark .token.important,
+.dark .token.variable {
+  color: #d16969;
+}
+
+/* Prism.js 浅色主题 */
+.light .token.comment,
+.light .token.prolog,
+.light .token.doctype,
+.light .token.cdata {
+  color: #008000;
+}
+
+.light .token.punctuation {
+  color: #393a34;
+}
+
+.light .token.property,
+.light .token.tag,
+.light .token.boolean,
+.light .token.number,
+.light .token.constant,
+.light .token.symbol,
+.light .token.deleted {
+  color: #36acaa;
+}
+
+.light .token.selector,
+.light .token.attr-name,
+.light .token.string,
+.light .token.char,
+.light .token.builtin,
+.light .token.inserted {
+  color: #032f62;
+}
+
+.light .token.operator,
+.light .token.entity,
+.light .token.url,
+.light .language-css .token.string,
+.light .style .token.string {
+  color: #393a34;
+}
+
+.light .token.atrule,
+.light .token.attr-value,
+.light .token.keyword {
+  color: #0000ff;
+}
+
+.light .token.function,
+.light .token.class-name {
+  color: #6f42c1;
+}
+
+.light .token.regex,
+.light .token.important,
+.light .token.variable {
+  color: #e36209;
+}
+
+/* 响应式设计 */
+@media (max-width: 1024px) {
+  .grid-cols-1.lg\:grid-cols-2 {
+    grid-template-columns: 1fr;
+  }
+  
+  .code-editor {
+    font-size: 16px;
+  }
+}
+
+/* 按钮最小尺寸 */
+@media (max-width: 768px) {
+  button {
+    min-width: 44px;
+    min-height: 44px;
+  }
+}
+
+/* 动画效果 */
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 自定义滚动条样式（可选） */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #2d2d30;
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #424245;
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #4e4e50;
+}
